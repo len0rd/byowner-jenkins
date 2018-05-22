@@ -1,5 +1,5 @@
 import groovy.sql.Sql
-// import java.sql.*
+import java.sql.*
 // import com.mysql.jdbc.*
 import org.apache.commons.text.WordUtils
 
@@ -24,6 +24,7 @@ println "classpath loaded"
 // hudson.FilePath workspace = hudson.model.Executor.currentExecutor().getCurrentWorkspace()
 // println workspace
 
+DriverManager.registerDriver(new com.mysql.jdbc.Driver())
 Class.forName('com.mysql.jdbc.Driver')
 
 def sql = Sql.newInstance('jdbc:mysql://10.20.20.66:3306/re_fsbo_front', 'tyler', 'dz77GAi7980', 'com.mysql.jdbc.Driver')
