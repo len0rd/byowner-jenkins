@@ -1,0 +1,26 @@
+defaultTasks 'libs'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    libs
+}
+
+dependencies {
+    libs 'mysql:mysql-connector-java:5.1.46'
+}
+
+task clean(type: Delete) {
+    delete 'lib'
+}
+
+task libs(type: Copy) {
+    into 'lib'
+    from configurations.libs
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.10'
+}
