@@ -26,7 +26,9 @@ println "classpath loaded"
 
 Class.forName('com.mysql.jdbc.Driver').newInstance()
 
-def sql = Sql.newInstance('jdbc:mysql://10.20.20.66:3306/re_fsbo_front', 'tyler', 'dz77GAi7980', 'com.mysql.jdbc.Driver')
+Connection conn = DriverManager.getConnection('jdbc:mysql://10.20.20.66:3306/re_fsbo_front', 'tyler', 'dz77GAi7980')
+
+// def sql = Sql.newInstance('jdbc:mysql://10.20.20.66:3306/re_fsbo_front', 'tyler', 'dz77GAi7980', 'com.mysql.jdbc.Driver')
 
 // sql.eachRow('SELECT Instance, Group_ID, Robot_Name FROM re_fsbo_init LIMIT 50') { row ->
 //     println "${row.Instance}, ${row.Group_ID}, ${row.Robot_Name}"
