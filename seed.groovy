@@ -1,6 +1,6 @@
-import groovy.sql.Sql
-import java.sql.*
-import com.mysql.jdbc.*
+// import groovy.sql.Sql
+// import java.sql.*
+// import com.mysql.jdbc.*
 import org.apache.commons.text.WordUtils
 
 String test = "waddup ma dude"
