@@ -1,8 +1,11 @@
 import groovy.sql.Sql
 import java.sql.*
 import com.mysql.jdbc.*
+import org.apache.commons.text.WordUtils
 
-println "waddup"
+String test = "waddup ma dude"
+println test
+println WordUtils.capitalizeFully(test)
 // def mysqlJar = 
 // new File('.').eachFile(FILES) {
 //     println it.name
@@ -18,13 +21,13 @@ println "waddup"
 // InputStream stream = streamFileFromWorkspace('/var/lib/jenkins/workspace/base/mysqlconnect.jar')
 // this.class.classLoader.rootLoader.addURL(myurl)
 println "classpath loaded"
-hudson.FilePath workspace = hudson.model.Executor.currentExecutor().getCurrentWorkspace()
-println workspace
+// hudson.FilePath workspace = hudson.model.Executor.currentExecutor().getCurrentWorkspace()
+// println workspace
 
 
-def sql = Sql.newInstance('jdbc:mysql://10.20.20.66:3306/re_fsbo_front', 'tyler', 'dz77GAi7980', 'com.mysql.jdbc.Driver')
+// def sql = Sql.newInstance('jdbc:mysql://10.20.20.66:3306/re_fsbo_front', 'tyler', 'dz77GAi7980', 'com.mysql.jdbc.Driver')
 
-sql.eachRow('SELECT Instance, Group_ID, Robot_Name FROM re_fsbo_init LIMIT 50') { row ->
-    println "${row.Instance}, ${row.Group_ID}, ${row.Robot_Name}"
+// sql.eachRow('SELECT Instance, Group_ID, Robot_Name FROM re_fsbo_init LIMIT 50') { row ->
+//     println "${row.Instance}, ${row.Group_ID}, ${row.Robot_Name}"
 
-}
+// }
