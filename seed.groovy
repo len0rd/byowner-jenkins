@@ -1,4 +1,4 @@
-// import groovy.sql.Sql
+import groovy.sql.Sql
 // import java.sql.*
 // import com.mysql.jdbc.*
 import org.apache.commons.text.WordUtils
@@ -26,7 +26,7 @@ println "classpath loaded"
 
 Class.forName('com.mysql.jdbc.Driver')
 
-// def sql = Sql.newInstance('jdbc:mysql://10.20.20.66:3306/re_fsbo_front', 'tyler', 'dz77GAi7980', 'com.mysql.jdbc.Driver')
+def sql = Sql.newInstance('jdbc:mysql://10.20.20.66:3306/re_fsbo_front', 'tyler', 'dz77GAi7980', 'com.mysql.jdbc.Driver')
 
 // sql.eachRow('SELECT Instance, Group_ID, Robot_Name FROM re_fsbo_init LIMIT 50') { row ->
 //     println "${row.Instance}, ${row.Group_ID}, ${row.Robot_Name}"
